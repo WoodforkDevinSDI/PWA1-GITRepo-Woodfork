@@ -8,7 +8,14 @@
 
 (function(){
 
-	console.log("FIGHT!!!");
+	console.log("FIGHT!!!"); 
+	
+	//player name
+	var playerOneName = "Scooby-Doo";
+	var playeerTwoName = "Lake Monster";
+	
+	
+	
 
 
 })();
