@@ -22,6 +22,29 @@
 	var player1Damage = 20;
 	var player2Damage = 20;
 	
+	var round =1;
 
 
+	//fight function
+	
+	function fight(){
+		//CODE WILL GO HERE
+	console.log('in the fight function');
+	
+	
+	
+	};
+	
+	
+	
+	function winnerCheck(){
+		//CODE WILL GO HERE
+	
+	
+	
+	};
+	
+	/***** PROGRAM'S ACTUAL STARTING POINT *****/
+	condole.log('program starts')
+	fight();
 })();
