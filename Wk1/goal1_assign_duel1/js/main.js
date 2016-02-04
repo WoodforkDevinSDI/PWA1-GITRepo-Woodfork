@@ -53,15 +53,38 @@
 		//console.log (playerTwoHealth);
 		
 		console.log(playerOneName + ":" + playerOneHealth + "" + playerTwoName + ":" + playerTwoHealth);
+			
+			var results = winnerCheck();
+			console.log(results);
+			
+			if (results === "no winner"){
+				round++;
+				alert(playerOneName + ":" + playerOneHealth + " *ROUND "+round+ "OVER* " + playerTwoName + ":" + playerTwoHealth);			
+			}else{
+				alert (results);
+				break;
 			};
+			
 	
 };	
 	
 	function winnerCheck(){
 		//CODE WILL GO HERE
+		console.log("in winner check function");
 	
-	
-	
+		var results="no winner";
+		
+		
+		if(playerOneHealth<1 && playerTwoHealth<1){
+			result = "You Both Die";
+			
+		}else if (playerOneHealth<1){
+			result = playerTwoName + "WINS!!!";	
+			
+		}else if (playerTwoHealth<1){
+			result = playerOneName + "WINS!!!";		
+		};
+	    return results; 
 	};
 	
 	/***** PROGRAM'S ACTUAL STARTING POINT *****/
