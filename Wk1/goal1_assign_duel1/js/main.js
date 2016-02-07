@@ -8,9 +8,9 @@
 
 //self-executing function
 
-(function(){
+(function() {
 
-console.log("FIGHT!!!");
+    console.log("FIGHT!!!");
 
 //player name
     var playerOneName = "Scooby-Doo";
@@ -25,5 +25,18 @@ console.log("FIGHT!!!");
     var playerTwoHealth = 100;
 
     var round = 1;
+
+    function fight() {
+    console.log('in the fight function');
+  
+
+    };
+
+    function winnerCheck(){};
+    //code will go here
+
+    /****** PROGRAM BEGINS ******/
+    console.log("program starts");
+    fight();
 
 })();
