@@ -62,15 +62,18 @@ END CODE
 
     var round = 0;
 
+//fight function
     function fight() {
     console.log('in the fight function');
 
     alert(playerOneName+":" +playerOneHealth+" *START* "+playerTwoName+":"+playerTwoHealth);
 
+//for loop for round count
 
     for (var i=0; i < 10; i++){
         console.log(i);
 
+//player damage random number formula
      var minDamage1 = player1Damage * .5;
      var minDamage2 = player2Damage * .5;
      var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);
@@ -84,11 +87,15 @@ END CODE
         //console.log(playerOneHealth);
         //console.log(playerTwoHealth);
 
+//Displays player's name and health in console
+
         console.log(playerOneName + ": " + playerOneHealth + playerTwoName+": " + playerTwoHealth);
+
+//gets winner confirmation from winnerCheck function and displays results in console log
 
         var results = winnerCheck();
         console.log(results);
-
+//determines if winner has been made and moves to next round if not
         if (results === "no winner") {
             round++;
             alert(playerOneName + ":" + playerOneHealth + " *ROUND " + round + " OVER*" + playerTwoName + ":" + playerTwoHealth);
@@ -98,6 +105,7 @@ END CODE
         }
       };
     };
+//function checks for the winner based on player's health
 
     function winnerCheck(){
         console.log("in winnerCheck FN");
@@ -110,7 +118,7 @@ END CODE
         }else if(playerTwoHealth <1){
             result =playerOneName + "WINS!!!"
         };
-
+//returns results of the winner
         return result;
 
 
