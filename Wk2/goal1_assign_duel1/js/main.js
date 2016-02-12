@@ -1,7 +1,7 @@
 /*
  Devin Woodfork
- 2/12/26
- Assignment: Goal1: Assignment: Develop Due#2
+ 2/6/26
+ Assignment: Goal1: Assignment: Due1
  */
 
 // console.log("test");
@@ -49,24 +49,24 @@ END CODE
     console.log("FIGHT!!!");
 
 //player name
-    var player1 = ["Scooby-Doo", 20, 100];
-    var player2 = ["Monsters", 20, 100];
+    var playerOneName = "Scooby-Doo";
+    var playerTwoName = "Monsters";
 
 //player damage
-//    var player1Damage = 20;
-//    var player2Damage = 20;
+    var player1Damage = 20;
+    var player2Damage = 20;
 
 //player health
-//    var playerOneHealth = 100;
-//    var playerTwoHealth = 100;
+    var playerOneHealth = 100;
+    var playerTwoHealth = 100;
 
-  var round = 0;
+    var round = 0;
 
 //fight function
     function fight() {
     console.log('in the fight function');
 
-    alert(player1[0] +":" + player1[2] +" *START* "+ player2[0] +":"+ player2[2]);
+    alert(playerOneName+":" +playerOneHealth+" *START* "+playerTwoName+":"+playerTwoHealth);
 
 //for loop for round count
 
@@ -74,22 +74,22 @@ END CODE
         console.log(i);
 
 //player damage random number formula
-     var minDamage1 = player1[1] * .5;
-     var minDamage2 = player2[1] * .5;
-     var f1 = Math.floor(Math.random()*(player1[1]-minDamage1)+minDamage1);
-     var f2 = Math.floor(Math.random()*(player2[1]-minDamage2)+minDamage2);
+     var minDamage1 = player1Damage * .5;
+     var minDamage2 = player2Damage * .5;
+     var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);
+     var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2);
 
        // console.log(f1);
        // console.log(f2);
-        player1[2]-=f1;
-        player2[2]-=f2;
+        playerOneHealth-=f1;
+        playerTwoHealth-=f2;
 
         //console.log(playerOneHealth);
         //console.log(playerTwoHealth);
 
 //Displays player's name and health in console
 
-        console.log(player1[0] + ": " + player1[2] + player2[0]+" : " + player2[2]);
+        console.log(playerOneName + ": " + playerOneHealth + playerTwoName+": " + playerTwoHealth);
 
 //gets winner confirmation from winnerCheck function and displays results in console log
 
@@ -98,7 +98,7 @@ END CODE
 //determines if winner has been made and moves to next round if not
         if (results === "no winner") {
             round++;
-            alert(player1[0] + ": " + player1[2] + " *ROUND " + round + " OVER*" + player1[0] + " : " + player2[2]);
+            alert(playerOneName + ":" + playerOneHealth + " *ROUND " + round + " OVER*" + playerTwoName + ":" + playerTwoHealth);
         }else{
             alert(results);
             break
@@ -111,12 +111,12 @@ END CODE
         console.log("in winnerCheck FN");
         var result="no winner";
 
-        if (player1[2]<1 && player2[2]<1) {
+        if (playerOneHealth<1 && playerTwoHealth<1) {
             result = "You Both Die";
-        }else if(player1[2] <1){
-            result = player2[0] + "WINS!!!"
-        }else if(player2[0] <1){
-            result =player1[0] + "WINS!!!"
+        }else if(playerOneHealth <1){
+            result =playerTwoName + "WINS!!!"
+        }else if(playerTwoHealth <1){
+            result =playerOneName + "WINS!!!"
         };
 //returns results of the winner
         return result;
