@@ -14,10 +14,11 @@
 
 //self-executing function
 
-(function() {
+(function () {
     //  fight_btn.onclick = fight;
     console.log("FIGHT!!!");
     //create onclick event handler for when button is pushed to start function
+
     document.getElementById("fight_btn").onclick = function () {
         //call the function the button will execute
         fight()
@@ -131,7 +132,7 @@
             result = "You Both Die";
         //elseif statement declaring that if only playerOne's health is less than 1 then declare playerTwo the winner
         } else if (player1.damage < 1) {
-            result = player2.name + " WINS!!!"
+            result = player2.name + " WINS!!!";
          //elseif statement declaring that if only playerTwo's health is less than 1 then declare playerOne the winner
         } else if (player2.name < 1) {
             result = player1.name + " WINS!!!"
